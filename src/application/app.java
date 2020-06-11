@@ -11,9 +11,8 @@ import java.util.Date;
 public class app {
     public static void main(String[] args) {
         Department obj = new Department(1, "Estoque");
-        Seller seller = new Seller(21, "Bob", "bob@gmail.com", new Date(), 3000.0, obj);
+        SellerDAO sd = DAOFactory.createSellerDAO();
+        Seller seller = sd.findById(3);
         System.out.println(seller);
-
-        SellerDAO sellerDAO = DAOFactory.createSellerDAO();
     }
 }
