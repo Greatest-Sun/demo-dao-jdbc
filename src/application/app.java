@@ -10,8 +10,8 @@ import java.util.Date;
 
 public class app {
     public static void main(String[] args) {
-        Department obj = new Department(1, "Estoque");
         SellerDAO sd = DAOFactory.createSellerDAO();
+        System.out.println("===Test 1 -> seller findById===");
         Seller seller = sd.findById(3);
         System.out.println(seller);
     }
